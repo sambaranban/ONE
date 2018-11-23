@@ -1,0 +1,18 @@
+This folder contains two datasets
+
+1. Citeseer (seeded) dataset
+2. WebKB (seeded) dataset
+
+Each of the datasets contain 4 files
+
+struct.csv ==> This is the adjacency matris of the network
+content.csv ==> This file contains semantic information associated with each node in the network.
+label.csv  ==> This file contains the label associated with each node
+permutation.csv ==> This file contains the permutation index of nodes in the network. i.e.
+		     For Example
+			Original Citeseer network has 3312 nodes and we seeded 5% ie 180 nodes and the resulting seeded network has 3312+180 = 3492 nodes.
+			A node is a seeded node (i.e. an outlier) if its permutation index is > 3312
+
+We observed experimentally that to detect outliers, it is better to give higher weightage to outlier score 2 (O_2) than outlier scores 1 and 3.
+
+	
